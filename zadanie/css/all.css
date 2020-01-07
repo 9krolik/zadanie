@@ -1,0 +1,135 @@
+* ,*:hover
+{
+  box-sizing: border-box;
+}
+.characters
+{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+ul{
+  list-style-type: none;
+}
+ul li
+{
+  display: inline;
+}
+.checkbox_vader,
+.checkbox_trooper,
+.checkbox_yoda{
+  display: none;
+}
+button
+{
+  width: 350px;
+  height: 68px;
+  background-color: black;
+  color: rgb(251,217,62);
+  font-weight: 600;
+  font-size: 27px;
+  border: none;
+  text-align: left;
+  word-spacing: 3px;
+  padding-left: 24px;
+  clip-path: polygon(0% 0%, 87% 0%, 100% 50%, 87% 100%, 0% 100%);
+  margin-left: 40px;
+}
+button:hover
+{
+  background-color: rgb(251,217,62);
+  color: black;
+  cursor: pointer;
+}
+[data-sentence="Force is strong in you"],
+[data-sentence="Just chillin'"],
+[data-sentence="There is no escape from the Dark Side."]
+{
+  align-items: center;
+}
+#checkbox_yoda + label
+{
+  background: url(../images/yoda.png) no-repeat;
+  height: 253px;
+  width: 253px;
+  display:inline-block;
+  position: relative;
+}
+#checkbox_trooper + label{
+  background: url(../images/trooper.png) no-repeat;
+  height: 253px;
+  width: 253px;
+  display:inline-block;
+  position: relative;}
+#checkbox_vader+label{
+  background: url(../images/vader.png) no-repeat;
+  height: 253px;
+  width: 253px;
+  display:inline-block;
+  position: relative;
+}
+#checkbox_trooper+label:hover:after,
+#checkbox_yoda+label:hover:after
+{
+  content: attr(data-sentence);
+  background-color:rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0%);
+  height: 45px;
+  width: 244px;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: 500;
+  margin-top: 70%;
+  box-sizing: border-box;
+}
+#checkbox_vader+label:hover:after{
+  content: attr(data-sentence);
+  background-color:rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0%);
+  height: 65px;
+  width: 244px;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-top: 70%;
+}
+#checkbox_yoda+label:hover,
+#checkbox_trooper+label:hover,
+#checkbox_vader+label:hover{
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 0px 3px black;
+  cursor: pointer;
+}
+#checkbox_yoda+label,
+#checkbox_trooper+label,
+#checkbox_vader+label{
+  border: 3px solid white; 
+  border-radius: 20px;
+  color: transparent;
+  box-sizing: border-box;
+}
+input[type=checkbox]:checked+label
+{
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 0px 3px black ;
+  }
+input[type=checkbox] {
+    display:none}
